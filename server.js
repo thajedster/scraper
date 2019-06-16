@@ -23,11 +23,12 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 axios.get('https://www.apnews.com/').then((response) => {
     var $ = cheerio.load(response.data);
 
-    $(".c0125").each(function (i, element) {
+    $("[data-key=related-story]").each(function (i, element) {
+        // console.log(element)
         result = {}
-        //result.title = $(this).children(".0126").children(".0127").text();
-        result.link = $(this).children(".c0126").attr("href");
-
+        result.title = $(element).children("[data-key=related-story-link]").children("[data-key=related-story-headline]").text();
+        result.link = $(element).children("[data-key=related-story-link]").attr("href");
+        // console.log(result)
         db.Article.create(result).then(function (dbArticle) {
             console.log(dbArticle);
         }).catch(function (err) {

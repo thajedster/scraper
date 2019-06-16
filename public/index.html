@@ -6,9 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand">Navbar</a>
+        <form class="form-inline">
+            <button class="btn btn-outline-success" type="button">scrape article</button>
+            <button class="btn btn-sm btn-outline-secondary" type="button">clear</button>
+        </form>
+    </nav>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Web Scraper</h1>
+            <p class="lead">Grab top articles from Associated Press News!</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6" id="articles">
+
+            </div>
+            <div class="col-sm-6" id="notes">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
 
 </body>
 
